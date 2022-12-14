@@ -13,7 +13,7 @@ function App() {
   const canvasWidth = 400;
   
   let P = new PVector(200, 200, 20);
-  P.vel.add(new BaseVector(1, 3));
+  P.vel.add(new BaseVector(3, 5));
   
   useEffect(() => {
 
@@ -34,14 +34,19 @@ function App() {
       currentCtx.reset();
       P.move(currentCanvas);
       P.show(currentCtx);
-    },64);
+    }, 32);
 
   }, [])
 
   return (
     <div className="App">
-      <h1>Arapuca.dev</h1>
+      <h1 className='header'>Arapuca.dev</h1>
+      <p className='subheader'>
+        Pensamento Computacioanl e Saberes Ancestrais.<br/>
+        Artefatos para captura de saberes.
+      </p>
       <Canvas canvasRef={canvas} witdh={canvasWidth} height={canvasHeight}/>
+      <p>Em Breve</p>
     </div>
   )
 }

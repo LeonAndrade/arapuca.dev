@@ -5,6 +5,21 @@
   text-align: center;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Fira Code", "Open Sans";
+  font-weight: 300;
+}
+
+.header {
+  margin-bottom: 20%;
+}
+
+.subheader {
+  margin-bottom: 30px;
+}
+
 .canvasContainer {
   border: 1px solid white;
   width: 400px;
