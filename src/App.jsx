@@ -1,4 +1,4 @@
-import VectorBall from './canvas/VectorBall';
+import VectorBall from './components/VectorBall';
 
 import './App.css';
 
@@ -8,15 +8,16 @@ function App() {
     <div className="App">
       <h1 className='header'>Arapuca.dev</h1>
       <div className="main">
-        <p className='subheader'>
-          Arapucas Computacionais são artefatos digitais para captura e processamento de símbolos.
-        </p>
-        <p>
-          Ideias sobre literacia tecnológica, cidadania digital e modos de navegação em espaços abstratos.
-        </p>
+        <div className="intro">
+          <p className='subheader'>
+            <strong>Arapucas Computacionais</strong> são artefatos digitais para captura e processamento de símbolos.
+          </p>
+          <p>
+            Ideias sobre <strong>literacia tecnológica</strong>, <strong>cidadania digital</strong> e modos de navegação em espaços abstratos.
+          </p>
+        </div>
         <VectorBall />
       </div>
-      <p>Em Breve</p>
     </div>
   )
 }

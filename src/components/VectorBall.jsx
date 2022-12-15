@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-import Canvas from '../components/Canvas';
+import Canvas from './Canvas';
 import PVector from '../helpers/PVector';
 import BaseVector from '../helpers/BaseVector';
 
@@ -80,7 +80,9 @@ function VectorBall() {
   }, [])
 
   return (
-    <Canvas canvasRef={canvas} witdh={canvasWidth} height={canvasHeight}/>
+    <div className="canvasContainer">
+      <Canvas canvasRef={canvas} witdh={canvasWidth} height={canvasHeight}/>
+    </div>
   )
 }
 
