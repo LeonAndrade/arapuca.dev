@@ -17,15 +17,56 @@ class PVector {
     ctx.ellipse(this.pos.x, this.pos.y, this.r, this.r, Math.PI, 0, 2 * Math.PI);
     ctx.fillStyle = 'rgb(100,150,100,.8)';
     ctx.fill();
+    ctx.closePath();
     
-    drawLine(
-      ctx,
-      this.pos.x,
-      this.pos.y,
-      (this.pos.x + this.vel.x * 2.8),
-      (this.pos.y + this.vel.y * 2.8)
-    );
-    ctx.stroke();
+    // Vel X
+    ctx.beginPath();
+    ctx.moveTo(this.pos.x, this.pos.y)
+    ctx.lineTo(
+      (this.pos.x),
+      (this.pos.y + this.acc.y * 6000)
+      );
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#ff2929';
+      ctx.stroke();
+      ctx.closePath();
+      
+      // Vel Y
+      ctx.beginPath();
+      ctx.moveTo(this.pos.x, this.pos.y)
+      ctx.lineTo(
+        (this.pos.x + this.acc.x * 6000),
+        (this.pos.y)
+        );
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#ff2929';
+      ctx.stroke();
+      ctx.closePath();
+
+      // V magnitude
+      ctx.beginPath();
+      ctx.moveTo(this.pos.x, this.pos.y)
+      ctx.lineTo(
+        (this.pos.x + this.acc.x * 4000),
+        (this.pos.y + this.acc.y * 4000)
+      );
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#0000ff';
+      ctx.stroke();
+      ctx.closePath();
+
+      // Acc
+      ctx.beginPath();
+      ctx.moveTo(this.pos.x, this.pos.y)
+      ctx.lineTo(
+        (this.pos.x + this.vel.x * 50),
+        (this.pos.y + this.vel.y * 50)
+      );
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#ffcc00';
+      ctx.stroke();
+      ctx.closePath();
+
   }
 
   bounce(canvas) {

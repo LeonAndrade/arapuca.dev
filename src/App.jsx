@@ -11,9 +11,12 @@ function App() {
 
   const canvasHeight = 400;
   const canvasWidth = 400;
+
+  let randX = Math.random(100,380) * 400
+  let randY = Math.random(100,380) * 400
   
-  let P = new PVector(200, 200, 20);
-  P.vel.add(new BaseVector(3, 5));
+  let P = new PVector(randX, randY, 20);
+  P.acc.add(new BaseVector(.004, .01));
   
   useEffect(() => {
 
@@ -41,11 +44,15 @@ function App() {
   return (
     <div className="App">
       <h1 className='header'>Arapuca.dev</h1>
-      <p className='subheader'>
-        Pensamento Computacioanl e Saberes Ancestrais.<br/>
-        Artefatos para captura de saberes.
-      </p>
-      <Canvas canvasRef={canvas} witdh={canvasWidth} height={canvasHeight}/>
+      <div className="main">
+        <p className='subheader'>
+          Arapucas Computacionais são artefatos digitais para captura e processamento de símbolos.
+        </p>
+        <p>
+          Ideias sobre literacia tecnológica, cidadania digital e modos de navegação em espaços abstratos.
+        </p>
+        <Canvas canvasRef={canvas} witdh={canvasWidth} height={canvasHeight}/>
+      </div>
       <p>Em Breve</p>
     </div>
   )
