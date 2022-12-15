@@ -13,6 +13,24 @@ class PVector {
   }
 
   show(ctx)  {
+
+    // Background Lines
+    ctx.beginPath();
+    ctx.moveTo(this.pos.x, 0)
+    ctx.lineTo(this.pos.x, 400);
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'rgb(100,100,100,.4)';
+    ctx.stroke();
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.moveTo(0, this.pos.y)
+    ctx.lineTo(400, this.pos.y);
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'rgb(100,100,100,.4)';
+    ctx.stroke();
+    ctx.closePath();
+
     ctx.beginPath();
     ctx.ellipse(this.pos.x, this.pos.y, this.r, this.r, Math.PI, 0, 2 * Math.PI);
     ctx.fillStyle = 'rgb(100,150,100,.8)';
@@ -66,7 +84,6 @@ class PVector {
       ctx.strokeStyle = '#ffcc00';
       ctx.stroke();
       ctx.closePath();
-
   }
 
   bounce(canvas) {
