@@ -33,7 +33,6 @@ p, h1, h2, h3, h4, h5, h6 {
 #root {
   width: inherit;
   height: inherit;
-  border: 1px solid rgba(109, 234, 0, 0.721);
 }
 
 .App {
