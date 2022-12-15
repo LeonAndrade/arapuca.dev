@@ -33,7 +33,7 @@ class PVector {
 
     ctx.beginPath();
     ctx.ellipse(this.pos.x, this.pos.y, this.r, this.r, Math.PI, 0, 2 * Math.PI);
-    ctx.fillStyle = 'rgb(100,150,100,.8)';
+    ctx.fillStyle = '#618C0A77';
     ctx.fill();
     ctx.closePath();
     
@@ -45,7 +45,7 @@ class PVector {
       (this.pos.y + this.acc.y * 6000)
       );
       ctx.lineWidth = 2;
-      ctx.strokeStyle = '#ff2929';
+      ctx.strokeStyle = '#E53D00';
       ctx.stroke();
       ctx.closePath();
       
@@ -57,7 +57,7 @@ class PVector {
         (this.pos.y)
         );
       ctx.lineWidth = 2;
-      ctx.strokeStyle = '#ff2929';
+      ctx.strokeStyle = '#E53D00';
       ctx.stroke();
       ctx.closePath();
 
@@ -69,7 +69,7 @@ class PVector {
         (this.pos.y + this.acc.y * 4000)
       );
       ctx.lineWidth = 2;
-      ctx.strokeStyle = '#0000ff';
+      ctx.strokeStyle = '#38A5EE';
       ctx.stroke();
       ctx.closePath();
 
@@ -81,7 +81,7 @@ class PVector {
         (this.pos.y + this.vel.y * 50)
       );
       ctx.lineWidth = 2;
-      ctx.strokeStyle = '#ffcc00';
+      ctx.strokeStyle = '#FFE900';
       ctx.stroke();
       ctx.closePath();
   }

@@ -43,6 +43,7 @@ function VectorBall() {
       let Xto = 0;
       let Yto = 0;
         
+      // Desenha o grid no background
       for (let i=0; i<20; i++) {
           
         ctx.current.beginPath();
@@ -67,11 +68,10 @@ function VectorBall() {
       }
 
       ctx.current.fillStyle = 'rgb(255,255,255)'
-      ctx.current.font = '20px sans-serif'
+      ctx.current.font = 'bold 12px "Fira Code"'
       ctx.current.fillText(
-        `{x: ${Math.round(P.pos.x)}, y: ${Math.round(P.pos.y)} }`,
-        P.pos.x - 40, 
-        P.pos.y - 40
+        `{ x: ${Math.round(P.pos.x)}, y: ${Math.round(P.pos.y)} }`,
+        P.pos.x - 60, P.pos.y - 30
       )
       P.move(canvas.current);
       P.show(ctx.current);

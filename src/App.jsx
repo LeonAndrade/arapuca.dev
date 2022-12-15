@@ -1,6 +1,7 @@
 import VectorBall from './components/VectorBall';
 
 import './App.css';
+import github from  './assets/github2.png'
 
 function App() {
 
@@ -18,6 +19,9 @@ function App() {
         </div>
         <VectorBall />
       </div>
+      <footer className="footer">
+        <a href="http://github.com/LeonAndrade/arapuca.dev"><img src={github} alt="github logo" /></a>
+      </footer>
     </div>
   )
 }
