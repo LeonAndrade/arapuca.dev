@@ -1,6 +1,10 @@
+import { HeaderContainer } from './styles';
+
 function Header() {
   return (
-    <h1 className='header'>Arapuca.dev</h1>
+    <HeaderContainer>
+      Arapuca.dev
+    </HeaderContainer>
   )
 }
 

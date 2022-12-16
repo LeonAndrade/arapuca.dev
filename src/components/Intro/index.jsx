@@ -1,13 +1,18 @@
+import {
+  IntroContainer,
+  IntroContent
+} from './styles'
+
 function Intro() {
   return (
-    <div className="intro">
-      <p className='subheader'>
+    <IntroContainer>
+      <IntroContent>
         <strong>Arapucas Computacionais</strong> são artefatos digitais para captura e processamento de símbolos.
-      </p>
-      <p>
+      </IntroContent>
+      <IntroContent>
         Ideias sobre <strong>literacia tecnológica</strong>, <strong>cidadania digital</strong> e modos de navegação em espaços abstratos.
-      </p>
-    </div>
+      </IntroContent>
+    </IntroContainer>
   )
 }
 

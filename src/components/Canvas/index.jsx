@@ -1,6 +1,13 @@
+import {
+  CanvasContainer,
+  StyledCanvas
+} from './styles'
+
 function Canvas({canvasRef, witdh, height}) {
   return(
-    <canvas ref={canvasRef} width={witdh} height={height}/>
+    <CanvasContainer>
+      <StyledCanvas ref={canvasRef} width={witdh} height={height}/>
+    </CanvasContainer>
   )
 }
 
