@@ -1,12 +1,11 @@
 import BaseVector from './BaseVector';
-import {drawLine} from './utils';
 
 class PVector {
   constructor(x, y, r) {
     this.pos = new BaseVector(x, y);
     this.vel = new BaseVector(0, 0);
     this.acc = new BaseVector(0, 0);
-    
+
     this.r = r;
     this.mass = 0;
     this.topspeed = 4;
@@ -22,7 +21,7 @@ class PVector {
     ctx.strokeStyle = 'rgb(100,100,100,.4)';
     ctx.stroke();
     ctx.closePath();
-    
+
     ctx.beginPath();
     ctx.moveTo(0, this.pos.y)
     ctx.lineTo(400, this.pos.y);
@@ -36,7 +35,7 @@ class PVector {
     ctx.fillStyle = '#618C0A77';
     ctx.fill();
     ctx.closePath();
-    
+
     // Vel X
     ctx.beginPath();
     ctx.moveTo(this.pos.x, this.pos.y)
@@ -48,7 +47,7 @@ class PVector {
       ctx.strokeStyle = '#E53D00';
       ctx.stroke();
       ctx.closePath();
-      
+
       // Vel Y
       ctx.beginPath();
       ctx.moveTo(this.pos.x, this.pos.y)
@@ -116,7 +115,7 @@ class PVector {
     this.vel.limit(this.topspeed);
     this.pos.add(this.vel);
     this.bounce(canvas);
-  } 
+  }
 
   resetForces() {
     this.acc.vel.normalize()
